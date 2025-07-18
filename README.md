@@ -1,82 +1,81 @@
-Here's a professional `README.md` for your **Chainlit Python Guardrails** project:
+Great! Here's your `README.md` in **pure Markdown** syntax, clean and ready to paste into your repository — **without the extra markdown code block around it**.
 
 ---
 
-```markdown
 # 🛡️ Chainlit Python Guardrails
 
-A smart Python code assistant powered by Gemini 2.5, built using **Chainlit**. This app features robust **input and output guardrails** to ensure only Python-related queries are allowed and only valid Python code is returned.
+A smart Python code assistant powered by **Gemini 2.5**, built using **Chainlit**. This app features robust **input and output guardrails** to ensure only Python-related queries are allowed and only valid Python code is returned.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Validates **input** to accept only Python-related questions
-- ✅ Validates **output** to return Python code only
-- 🤖 Built on **Gemini 2.5 Flash** model
-- 🔒 Guardrail protection using agent-based architecture
-- 🧠 Multi-agent design: input validation, code generation, and output inspection
-- 🧵 Real-time chat interface via **Chainlit**
+* ✅ Validates **input** to accept only Python-related questions
+* ✅ Validates **output** to return Python code only
+* 🤖 Built on **Gemini 2.5 Flash** model
+* 🔒 Guardrail protection using agent-based architecture
+* 🧠 Multi-agent design: input validation, code generation, and output inspection
+* 🧵 Real-time chat interface via **Chainlit**
 
 ---
 
 ## 📦 Tech Stack
 
-| Component      | Description                            |
-|----------------|----------------------------------------|
-| 🐍 Python      | Core language                          |
-| ⚡ FastAPI      | Optional backend framework (if needed) |
-| 🔗 Chainlit     | Chat frontend and messaging hooks      |
-| 🧠 Gemini 2.5  | LLM model via OpenAI-compatible client |
-| 🔒 Pydantic     | Guardrail schemas                     |
-| 🌿 dotenv       | Secrets management                    |
+| Component     | Description                            |
+| ------------- | -------------------------------------- |
+| 🐍 Python     | Core language                          |
+| ⚡ FastAPI     | Optional backend framework (if needed) |
+| 🔗 Chainlit   | Chat frontend and messaging hooks      |
+| 🧠 Gemini 2.5 | LLM model via OpenAI-compatible client |
+| 🔒 Pydantic   | Guardrail schemas                      |
+| 🌿 dotenv     | Secrets management                     |
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-
 .
 ├── agents/
 │   └── agent definitions and utilities
 ├── main.py
 ├── .env
 └── README.md
-
-````
+```
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. **Clone the Repository**
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/chainlit-python-guardrails.git
 cd chainlit-python-guardrails
-````
+```
 
-2. **Create and Activate Virtual Environment**
+### 2. Create and Activate Virtual Environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. **Install Dependencies**
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Configure Environment Variables**
-   Create a `.env` file:
+### 4. Configure Environment Variables
+
+Create a `.env` file and add your Gemini API key:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
-5. **Run the App**
+### 5. Run the App
 
 ```bash
 chainlit run main.py
@@ -102,7 +101,7 @@ chainlit run main.py
 
 ## 📌 Screenshots
 
-> Add screenshots or a short video of your app here using Chainlit interface.
+> Add screenshots or a short video of your app using the Chainlit interface here.
 
 ---
 
@@ -124,9 +123,6 @@ This project is licensed under the **MIT License**.
 * [Gemini](https://deepmind.google/technologies/gemini/)
 * Inspired by OpenAI-style coding assistants.
 
-```
-
 ---
 
-Let me know if you want this exported as a file or customized for Hugging Face, Colab, or a public demo.
-```
+Let me know if you want this exported to a file or uploaded to GitHub for you.
