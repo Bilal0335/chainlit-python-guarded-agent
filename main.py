@@ -49,38 +49,6 @@ async def chat_start():
     cl.user_session.set("history", [])
     await cl.Message(content="👋 Welcome to BilalCode! Ask me anything about frontend dev.").send()
 
-# ✅ Chainlit: On message
-# @cl.on_message
-# async def handle_message(message: cl.Message):
-#     # ✅ Get user input
-#     msg = cl.Message(content="Thinking...")
-#     await msg.send()
-
-#     history = cl.user_session.get("history") or []
-
-#     # Save user message
-#     history.append({'role': 'user', 'content': message.content})
-
-#     # 🔁 Generate response
-#     res = await Runner.run(
-#         agent,
-#         input=message.content,
-#         run_config=config
-#     )
-
-#     async for event in res.stream_events():
-#         if event.type == 'raw_response_event' and isinstance(event.data,ResponseTextDeltaEvent):
-#             await msg.stream_token(event.data.delta)
-
-#     # Save assistant reply
-#     history.append({'role': 'assistant', 'content': res.final_output})
-#     cl.user_session.set("history", history)
-
-#     # ✅ Show in terminal and Chainlit UI
-#     print(f"User: {message.content}")
-#     print(f"Assistant: {res.final_output}")
-#     await cl.Message(content=res.final_output).send()
-
 @cl.on_message
 async def handle_message(message: cl.Message):
     msg = cl.Message(content="⏳ Thinking...")
@@ -113,4 +81,37 @@ async def handle_message(message: cl.Message):
 
     print(f"User: {message.content}")
     print(f"Assistant: {final_response}")
+
+
+# ✅ Chainlit: On message
+# @cl.on_message
+# async def handle_message(message: cl.Message):
+#     # ✅ Get user input
+#     msg = cl.Message(content="Thinking...")
+#     await msg.send()
+
+#     history = cl.user_session.get("history") or []
+
+#     # Save user message
+#     history.append({'role': 'user', 'content': message.content})
+
+#     # 🔁 Generate response
+#     res = await Runner.run(
+#         agent,
+#         input=message.content,
+#         run_config=config
+#     )
+
+#     async for event in res.stream_events():
+#         if event.type == 'raw_response_event' and isinstance(event.data,ResponseTextDeltaEvent):
+#             await msg.stream_token(event.data.delta)
+
+#     # Save assistant reply
+#     history.append({'role': 'assistant', 'content': res.final_output})
+#     cl.user_session.set("history", history)
+
+#     # ✅ Show in terminal and Chainlit UI
+#     print(f"User: {message.content}")
+#     print(f"Assistant: {res.final_output}")
+#     await cl.Message(content=res.final_output).send()
 print("-------------------------------")
